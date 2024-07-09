@@ -4,7 +4,7 @@ export interface Post {
     slug: { current: string };
     publishedAt: string;
     description: string;
-   // body: any;
+    body: any;
     
     
   }

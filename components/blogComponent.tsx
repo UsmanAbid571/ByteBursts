@@ -7,28 +7,11 @@ interface Props {
   post:Post;
 }
 
-async function getPosts() {
-  const query = ` 
-  *[_type == "post"] {
-    title,
-    slug,
-    publishedAt,
-    body,
-    description,
-    // tags[]-> {
-    //   slug,
-    //   name
-    // }
-  }
-  `;
-  const data = await client.fetch(query);
-  return data;
-}
+
 const blogPage = async ({post}:Props) => {
-  //const posts = await getPosts();
   return (
 <>
-   <Link href="">
+   <Link href={`/blogpage/${post.slug.current}`}>
     <div className='max-w-2xl text-justify space-y-2 mx-auto mt-24 text-white cursor-pointer'>
      <h1 className='text-2xl cursor-pointer'>{post.title}</h1>
      <p className='text-slate-500 cursor-pointer'>{post.description}</p>
