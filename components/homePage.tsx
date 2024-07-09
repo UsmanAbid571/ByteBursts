@@ -21,7 +21,7 @@ const Homepage = () => {
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <img className="object-cover object-center rounded" alt="Programmer" src="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/720x600" />
+                        <Image className="object-cover object-center rounded" alt="Programmer" src="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/720x600" />
                     </div>
                 </div>
             </section>
@@ -81,7 +81,7 @@ const Homepage = () => {
                 <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
                     <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
                         <h1 className="title-font font-medium text-3xl text-indigo-500">Subscribe Now!</h1>
-                        <p className="leading-relaxed mt-4">"Stay ahead with ByteBursts! Subscribe now for the latest insights delivered straight to your inbox. Join our community of knowledge seekers today!"</p>
+                        <p className="leading-relaxed mt-4">Stay ahead with ByteBursts! Subscribe now for the latest insights delivered straight to your inbox. Join our community of knowledge seekers today!</p>
                     </div>
                     <div className="lg:w-2/6 md:w-1/2 bg-gray-300 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                         <h2 className="text-indigo-500 text-lg font-medium title-font mb-5">Subscribe</h2>
