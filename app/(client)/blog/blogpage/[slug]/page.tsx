@@ -38,12 +38,14 @@ const Blogpage = async ({params}:Params) => {
     const post: Post = await getPost(params?.slug);
 
   return (
-    <div className='text-white  text-center'>
+    <div className=''>
      <h1 className='text-4xl text-blue-700 font-bold my-14'>{post.title}</h1>
-      <div className='w-[100%] h-[0.25px] bg-slate-500 '></div>
-      <div className={richTextStyles}>
+      <div className='h-[0.25px] bg-slate-500 '></div>
+      
+      <div className="">
       <PortableText value={post?.body} />
       </div>
+      
 
     </div>
   )
@@ -53,9 +55,9 @@ export default Blogpage
 
 // const myPortableTextComponents = {
 //     types: {
-//       image: ({ value }: any) => (
+//       image: ({ source }: any) => (
 //         <Image
-//           src={urlForImage(value).url()}
+//           src={urlForImage(source)}
 //           alt="Post"
 //           width={700}
 //           height={700}
@@ -63,12 +65,9 @@ export default Blogpage
 //       ),
 //     },
 //   };
-const richTextStyles = `
-mt-14
-text-justify
-max-w-2xl
-m-auto
-min-h-screen
-
-
-`;
+// const richTextStyles = `
+// mt-14
+// text-justify
+// m-auto
+// min-h-screen
+// `;

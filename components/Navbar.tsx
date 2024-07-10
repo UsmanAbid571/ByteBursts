@@ -6,19 +6,23 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div>
-      <nav className='py-5 px-5 flex justify-between items-center '>
-      <div className='text-3xl font-bold text-slate-200'>Byte Bursts</div>
-        <ul className="flex justify-around gap-4 text-lg font-semibold text-slate-200">
-       
-            <Link href="/"><li>Home</li></Link>
-            <Link href="/blog"><li>Blog</li></Link>
-            <Link href="#newsletter"><li>Newsletter</li></Link>
-            <Link href="#about"><li>About</li></Link>
-            <Link href="#contact"><li>Contact</li></Link>
-            <Link href="/studio"><li>Admin</li></Link>
-        </ul>
-        
-      </nav>
+     <header className=" body-font">
+  <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a className="flex title-font items-center text-gray-200 font-semibold mb-4 md:mb-0">
+     
+      <span className="ml-3 text-xl">Byte Bursts</span>
+    </a>
+    <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <Link href="/" className="mr-5   text-gray-200 hover:text-gray-500">Home</Link>
+      <Link href="/blog" className="mr-5 text-gray-200  hover:text-gray-500">Blog</Link>
+      <Link href="#about" className="mr-5  text-gray-200 hover:text-gray-500">About</Link>
+      <Link href="#newsletter" className="mr-5  text-gray-200 hover:text-gray-500">Newsletter</Link>
+      <Link href="#contact" className="mr-5 text-gray-200  hover:text-gray-500">Contact</Link>
+      <Link href="/admin" className="mr-5 text-gray-200  hover:text-gray-500">Admin</Link>
+      
+    </nav>
+  </div>
+</header>
     </div>
   )
 }
