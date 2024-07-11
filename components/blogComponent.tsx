@@ -11,7 +11,7 @@ interface Props {
 const blogPage = async ({post}:Props) => {
   return (
 <>
-   <Link href={`/blogpage/${post.slug.current}`}>
+   <Link href={`/blog/blogpage/${post.slug.current}`}>
     <div className='max-w-3xl text-justify space-y-2 mx-auto mt-24 text-white cursor-pointer px-10'>
      <h1 className='text-2xl cursor-pointer'>{post.title}</h1>
      <p className='text-slate-500 cursor-pointer'>{post.description}</p>

@@ -7,4 +7,5 @@ export interface Post {
     body: any;
     
     
+    
   }

@@ -18,13 +18,14 @@ const Navbar = () => {
       <Link href="#about" className="mr-5  text-gray-200 hover:text-gray-500">About</Link>
       <Link href="#newsletter" className="mr-5  text-gray-200 hover:text-gray-500">Newsletter</Link>
       <Link href="#contact" className="mr-5 text-gray-200  hover:text-gray-500">Contact</Link>
-      <Link href="/admin" className="mr-5 text-gray-200  hover:text-gray-500">Admin</Link>
+      <Link href="/studio" className="mr-5 text-gray-200  hover:text-gray-500">Admin</Link>
       
     </nav>
   </div>
 </header>
     </div>
   )
+
 }
 
 export default Navbar

@@ -5,6 +5,7 @@ import { Post } from "../../../../utils/interface";
 import { PortableText } from "@portabletext/react";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
+import "./page.css"
 
 interface Params {
     params: {
@@ -38,14 +39,12 @@ const Blogpage = async ({params}:Params) => {
     const post: Post = await getPost(params?.slug);
 
   return (
-    <div className=''>
-     <h1 className='text-4xl text-blue-700 font-bold my-14'>{post.title}</h1>
-      <div className='h-[0.25px] bg-slate-500 '></div>
-      
-      <div className="">
-      <PortableText value={post?.body} />
+    <div className='text-white  text-center'>
+     <h1 className='text-5xl text-blue-700 font-bold my-14'>{post.title}</h1>
+      <div className='w-[100%] h-[0.25px] bg-slate-500 '></div>
+      <div className="blogDisplay">
+      <PortableText value={post?.body} components={myPortableTextComponents} />
       </div>
-      
 
     </div>
   )
@@ -53,21 +52,16 @@ const Blogpage = async ({params}:Params) => {
 
 export default Blogpage
 
-// const myPortableTextComponents = {
-//     types: {
-//       image: ({ source }: any) => (
-//         <Image
-//           src={urlForImage(source)}
-//           alt="Post"
-//           width={700}
-//           height={700}
-//         />
-//       ),
-//     },
-//   };
-// const richTextStyles = `
-// mt-14
-// text-justify
-// m-auto
-// min-h-screen
-// `;
+const myPortableTextComponents = {
+    types: {
+      image: ({ value }: any) => (
+        <Image
+          src={urlForImage(value)}
+          alt="Post"
+          width={700}
+          height={700}
+          className='mb-5'
+        />
+      ),
+    },
+  };
