@@ -9,3 +9,7 @@ export interface Post {
     
     
   }
+export interface Author {
+  name: string;
+  image: any;
+}

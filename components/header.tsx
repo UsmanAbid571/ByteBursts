@@ -8,7 +8,7 @@ const Header = ({title=""}:Props) => {
     return (
         <div>
             <div className='flex justify-center mt-24 mx-8'>
-                <header className='text-6xl font-bold text-blue-800 mb-6' >{title}</header>
+                <header className='text-7xl font-bold text-blue-800 mb-6' >{title}</header>
 
             </div>
         </div>

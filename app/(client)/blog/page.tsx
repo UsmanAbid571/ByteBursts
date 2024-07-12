@@ -26,16 +26,17 @@ export const revalidate = 60;
 
 export default async  function Home() {
   const posts: Post[] = await getPosts();
-  console.log(posts)
+ 
   
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen '>
     <div>
       <Header title="Blogs"/>
     </div>
+    <div className='mt-20'>
     {posts?.length > 0 &&
           posts?.map((post) => <Blogpage key={post._id} post={post} />)}
-    
+    </div>
    
     </div>
   );
