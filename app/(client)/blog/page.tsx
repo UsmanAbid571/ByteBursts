@@ -33,7 +33,7 @@ export default async  function Home() {
     <div>
       <Header title="Blogs"/>
     </div>
-    <div className='mt-20'>
+    <div className='mt-20 mx-6'>
     {posts?.length > 0 &&
           posts?.map((post) => <Blogpage key={post._id} post={post} />)}
     </div>
