@@ -8,6 +8,7 @@ import Image from "next/image";
 import "./page.css"
 import { Author } from '../../../../utils/interface';
 import Profile from '../../../../../assets/profile.png'
+import CodeBlock from '@/components/codeBlock';
 
 interface Params {
   params: {
@@ -84,5 +85,8 @@ const myPortableTextComponents = {
         className='mb-5'
       />
     ),
+    code: ({ value }: any) => {
+      return <CodeBlock value={value} />
+    },
   },
 };
